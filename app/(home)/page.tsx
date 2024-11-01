@@ -19,7 +19,11 @@ export default async function HomePage() {
           {billionaries.map((billion) => {
             return (
               <li key={billion.id}>
-                <Link href={`/person/${billion.id}`}>
+                <Link
+                  href={{
+                    pathname: `/person/${billion.id}`,
+                    query: { name: billion.name },
+                  }}>
                   <Image
                     src={billion.squareImage}
                     alt={billion.name}

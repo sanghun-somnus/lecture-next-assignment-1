@@ -8,8 +8,9 @@ type Asset = {
 
 type Person = {
   id: string;
+  name: string;
   country: string;
-  sqaureImage: string;
+  squareImage: string;
   bio: string[];
   netWorth: number;
   financialAssets: Asset[];
@@ -21,4 +22,11 @@ type Billionary = {
   squareImage: string;
   netWorth: number;
   industries: string[];
+};
+
+type PersonSearchParams = {
+  name: string;
+};
+type PersonParams = {
+  id: string;
 };
